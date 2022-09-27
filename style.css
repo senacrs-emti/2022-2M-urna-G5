@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+
+.mesario{
+    width: 75%;
+    height: 500px;
+    margin: 0 auto;   
+    background-color: rgba(159,153,143,255); 
+    border-radius: 10px;
+    margin-top: 1cm;
+    padding-top: 50px;
+}
+
+.painel{
+    width: 55%;
+    background-color: #bdc8bb;
+    height: 75px;
+    margin: 0 auto; 
+    border-radius: 10px;
+    border: 3px solid  black;  
+    padding-top: 75px;  
+}
+
+.teclas{
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bnt.click{
+    margin: 0 auto;
+    color: white;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    margin: 1px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.bnt.corrige{
+    margin: 0 auto;
+    color: white;
+    height: 50px;
+    width: 85px;
+    background-color: red;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    margin: 1px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.bnt.confirma{
+    margin: 0 auto;
+    color: white;
+    height: 50px;
+    width: 85px;
+    background-color: rgb(11, 237, 11);
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    margin: 1px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
