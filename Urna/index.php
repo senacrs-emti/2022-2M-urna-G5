@@ -14,30 +14,55 @@
     <main>
         <div class="urna">
             <div class="urna__tela">
+                <div class="tela__cargo">
+                    <h1 class="deputadoFederal">Deputado Federal</h1>
+                    <h1 class="deputadoEstadual">Deputado Estadual</h1>
+                    <h1 class="senador">Senador</h1>
+                    <h1 class="governador">Governador</h1>
+                    <h1 class="presidente">Presidente</h1>
+                </div>
+                <div class="tela__digitos">
+                    <div class="tela__digito digito1"><h1></h1></div>
+                    <div class="tela__digito digito2"><h1></h1></div>
+                    <div class="tela__digito digito3"><h1></h1></div>
+                    <div class="tela__digito digito4"><h1></h1></div>
+                    <div class="tela__digito digito5"><h1></h1></div>
+                    <div class="tela__digito digito6"><h1></h1></div>
+                    <div class="tela__digito digito7"><h1></h1></div>
+                    <div class="tela__digito digito8"><h1></h1></div>
+                    <div class="tela__digito digito9"><h1></h1></div>
+                    <div class="tela__digito digito10"><h1></h1></div>
+                    <div class="tela__digito digito11"><h1></h1></div>
+                    <div class="tela__digito digito12"><h1></h1></div>
+                    <div class="tela__digito digito13"><h1></h1></div>
+                    <div class="tela__digito digito14"><h1></h1></div>
+                    
+                </div>
             </div>
             <aside class="urna__lado">
                 <div class="urna__titulo">
                     <h1>Justiça Eleitoral</h1>
                 </div>
                 <div class="urna__numeros">
-                    <div class="numero"><a href="#">1</a></div>
-                    <div class="numero"><a href="#">2</a></div>
-                    <div class="numero"><a href="#">3</a></div>
-                    <div class="numero"><a href="#">4</a></div>
-                    <div class="numero"><a href="#">5</a></div>
-                    <div class="numero"><a href="#">6</a></div>
-                    <div class="numero"><a href="#">7</a></div>
-                    <div class="numero"><a href="#">8</a></div>
-                    <div class="numero"><a href="#">9</a></div>
-                    <div class="numero"><a href="#">0</a></div>
+                    <div class="numero"><h1>1</h1></div>
+                    <div class="numero"><h1>2</h1></div>
+                    <div class="numero"><h1>3</h1></div>
+                    <div class="numero"><h1>4</h1></div>
+                    <div class="numero"><h1>5</h1></div>
+                    <div class="numero"><h1>6</h1></div>
+                    <div class="numero"><h1>7</h1></div>
+                    <div class="numero"><h1>8</h1></div>
+                    <div class="numero"><h1>9</h1></div>
+                    <div class="numero"><h1>0</h1></div>
                 </div>
                 <div class="urna__teclas">
-                    <div class="tecla--branco"><a href="#">Branco</a></div>
-                    <div class="tecla--vermelho"><a href="#">Corrige</a></div>
-                    <div class="tecla--verde"><a href="#">Confirma</a></div>
+                    <div class="tecla--branco">Branco</div>
+                    <div class="tecla--vermelho">Corrige</div>
+                    <div class="tecla--verde">Confirma</div>
                 </div>
             </aside>
         </div>
     </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
