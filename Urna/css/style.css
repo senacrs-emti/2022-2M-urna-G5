@@ -42,6 +42,11 @@ main {
     margin: 0 30px;
 }
 
+.tela__candidato {
+    padding: 10px;
+    font-size: 12px;
+}
+
 .tela__cargo {
     font-size: 18px;
     width: 100%;
@@ -60,27 +65,40 @@ main {
     margin: 3px;
     width: 35px;
     height: 40px;
-    display: none;
+    font-size: 26px;
+    text-align: center;
 }
 
-.digito1, .digito2, .digito3, .digito4 {
-    display: block;
+.tela__candidato {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
 }
 
-.deputadoEstadual {
-    display: none;
+.piscando {
+    animation: piscando 1.2s;
+    animation-iteration-count: infinite;
 }
 
-.senador {
-    display: none;
+.descricao {
+    font-size: 8px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.governador {
-    display: none;
+.candidato p {
+    font-size: 16px;
 }
 
-.presidente {
-    display: none;
+.descricao img {
+    width: 80px;
+}
+
+@keyframes piscando{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
 }
 
 .urna__lado {
@@ -106,6 +124,7 @@ main {
 }
 
 .numero {
+    display: flex;
     width: 40px;
     height: 40px;
     background-color: black;

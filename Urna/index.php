@@ -14,29 +14,16 @@
     <main>
         <div class="urna">
             <div class="urna__tela">
+                <div class="tela__candidato">
+                    <h1 id="seuVoto">Seu voto para:</h1>
+                    <div class="descricao"></div>
+                </div>
                 <div class="tela__cargo">
-                    <h1 class="deputadoFederal">Deputado Federal</h1>
-                    <h1 class="deputadoEstadual">Deputado Estadual</h1>
-                    <h1 class="senador">Senador</h1>
-                    <h1 class="governador">Governador</h1>
-                    <h1 class="presidente">Presidente</h1>
+                    <h1></h1>
                 </div>
                 <div class="tela__digitos">
-                    <div class="tela__digito digito1"><h1></h1></div>
-                    <div class="tela__digito digito2"><h1></h1></div>
-                    <div class="tela__digito digito3"><h1></h1></div>
-                    <div class="tela__digito digito4"><h1></h1></div>
-                    <div class="tela__digito digito5"><h1></h1></div>
-                    <div class="tela__digito digito6"><h1></h1></div>
-                    <div class="tela__digito digito7"><h1></h1></div>
-                    <div class="tela__digito digito8"><h1></h1></div>
-                    <div class="tela__digito digito9"><h1></h1></div>
-                    <div class="tela__digito digito10"><h1></h1></div>
-                    <div class="tela__digito digito11"><h1></h1></div>
-                    <div class="tela__digito digito12"><h1></h1></div>
-                    <div class="tela__digito digito13"><h1></h1></div>
-                    <div class="tela__digito digito14"><h1></h1></div>
-                    
+                    <div class="tela__digito piscando"></div>
+                    <div class="tela__digito"></div>
                 </div>
             </div>
             <aside class="urna__lado">
@@ -44,16 +31,16 @@
                     <h1>Justiça Eleitoral</h1>
                 </div>
                 <div class="urna__numeros">
-                    <div class="numero"><h1>1</h1></div>
-                    <div class="numero"><h1>2</h1></div>
-                    <div class="numero"><h1>3</h1></div>
-                    <div class="numero"><h1>4</h1></div>
-                    <div class="numero"><h1>5</h1></div>
-                    <div class="numero"><h1>6</h1></div>
-                    <div class="numero"><h1>7</h1></div>
-                    <div class="numero"><h1>8</h1></div>
-                    <div class="numero"><h1>9</h1></div>
-                    <div class="numero"><h1>0</h1></div>
+                    <div class="numero" onclick=clicou(1)><h1>1</h1></div>
+                    <div class="numero" onclick=clicou(2)><h1>2</h1></div>
+                    <div class="numero" onclick=clicou(3)><h1>3</h1></div>
+                    <div class="numero" onclick=clicou(4)><h1>4</h1></div>
+                    <div class="numero" onclick=clicou(5)><h1>5</h1></div>
+                    <div class="numero" onclick=clicou(6)><h1>6</h1></div>
+                    <div class="numero" onclick=clicou(7)><h1>7</h1></div>
+                    <div class="numero" onclick=clicou(8)><h1>8</h1></div>
+                    <div class="numero" onclick=clicou(9)><h1>9</h1></div>
+                    <div class="numero" onclick=clicou(0)><h1>0</h1></div>
                 </div>
                 <div class="urna__teclas">
                     <div class="tecla--branco">Branco</div>
@@ -63,6 +50,7 @@
             </aside>
         </div>
     </main>
+    <script src="js/passos.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
