@@ -1,0 +1,34 @@
+.candidato1{
+    background-color: royalblue;
+    height: 10px;
+    width: 622px;
+}
+.candidato2 {
+    background-color: royalblue;
+    height: 10px; 
+    width: 496px;
+}
+
+.candidato3{
+    background-color: royalblue;
+    height: 10px;
+    width: 312px;
+}
+.candidato4{
+background-color: royalblue;
+height: 10px;
+width: 250px;
+}
+
+
+
+.fonte1{
+    font-family: fantasy;
+    display: flex;
+    background-color: aqua;
+    height: 18px;
+    width: 150px;
+}
+.fonte2{
+    font-family: fantasy;
+}
