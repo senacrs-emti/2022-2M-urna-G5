@@ -66,6 +66,28 @@ let passos = [
         ]
     },
     {
+        titulo: 'Governador',
+        numeros: 2,
+        candidatos: [
+            {
+                numero: '10',
+                nome: 'Gustavo',
+                partido: 'PL',
+                fotos: [
+                    {url: 'gustavo.png', legenda: 'Presidente'}
+                ] 
+            },
+            {
+                numero: '10',
+                nome: 'José',
+                partido: 'PT',
+                fotos: [
+                    {url: 'jose.png', legenda: 'Presidente'}
+                ] 
+            }
+        ]
+    },
+    {
         titulo: 'Presidente',
         numeros: 2,
         candidatos: [

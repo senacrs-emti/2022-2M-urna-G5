@@ -43,7 +43,7 @@
                     <div class="numero" onclick=clicou(0)><h1>0</h1></div>
                 </div>
                 <div class="urna__teclas">
-                    <div class="tecla--branco">Branco</div>
+                    <div class="tecla--branco" onclick=branco()>Branco</div>
                     <div class="tecla--vermelho">Corrige</div>
                     <div class="tecla--verde">Confirma</div>
                 </div>

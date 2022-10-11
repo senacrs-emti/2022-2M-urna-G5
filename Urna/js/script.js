@@ -5,6 +5,7 @@ let numero = '';
 let passoAtual = 0;
 let descricao = document.querySelector('.descricao');
 let telaCargo = document.querySelector('.tela__cargo')
+let votoBranco = document.querySelector('.tela--branco')
 
 function comecar(){
     let passo = passos[passoAtual];
@@ -52,6 +53,18 @@ function atualizaInterface(){
         descricao.innerHTML = '<div class="piscando"><p><br>Voto Nulo</p></div>';
     }
     telaCargo.style.marginTop = 0;
+}
+
+function branco(){
+    if(digito === ''){
+        votoBranco = true;
+        seuVoto.style.display = 'block';
+        digito.innerHTML = '';
+        descricao.innerHTML = '<div class="pisca">VOTO EM BRANCO</div>';            
+    } else{
+        alert('Para votar em BRANCO \no campo de voto deve estar vazio.\n'+ 
+            'Aperte CORRIGE para apagar o campo de voto.');
+    }
 }
 
 
