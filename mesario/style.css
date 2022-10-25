@@ -23,7 +23,7 @@ body{
     width: 75%;
     height: 550px;
     margin: 0 auto;   
-    background-color: rgba(159,153,143,255); 
+    background-color: #d6d5d9; 
     border-radius: 10px;
     margin-top: 1cm;
     padding-top: 50px;
@@ -35,7 +35,7 @@ img{
 
 .painel{
     width: 57%;
-    background-color: #bdc8bb;
+    background-color: #869985;
     height: 75px;
     margin: 0 auto; 
     border-radius: 10px;
