@@ -204,5 +204,8 @@ main {
     }
 }
 
-
+.fim h1{
+    line-height: 360px;
+    text-align: center;
+}
 

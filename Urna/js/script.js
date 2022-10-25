@@ -1,77 +1,75 @@
 let seuVoto = document.querySelector('#seuVoto');
 let cargo = document.querySelector('.tela__cargo h1');
-let digitos = document.querySelector('.tela__digitos');
-let numero = '';
-let passoAtual = 0;
 let descricao = document.querySelector('.descricao');
-let telaCargo = document.querySelector('.tela__cargo')
-let votoBranco = document.querySelector('.tela--branco')
+let digitos = document.querySelector('.tela__digitos');
+
+let passoAtual = 0;
+let numero = '';
+let votoBranco = false;
+let corrigir = true;
 
 function comecar(){
     let passo = passos[passoAtual];
-    let digito = '';
-    for(let i = 0; i < passo.digitos; i++){
+    let numeros = '';
+    numero = '';
+    votoBranco = false;
+    corrigir = true;
+
+    for (let i = 0; i < passo.digitos; i++) {
         if(i === 0){
-            digito += '<div class="tela__digito piscando"></div>';
-        } else {
-            digito += '<div class="tela__digito"></div>'
+            numeros += '<div class="tela__digito piscando"></div>';   
+        } else{
+            numeros += '<div class="tela__digito"></div>';
         }
     }
+
     seuVoto.style.display = 'none';
-    cargo.innerHTML = passo.titulo;
-    digitos.innerHTML = digito;
+    cargo.innerHTML = passo.cargo;
+    descricao.innerHTML = '';
+    digitos.innerHTML = numeros;
 }
 
 function atualizaInterface(){
     let passo = passos[passoAtual];  
-    let digito = digitos.textContent
     let candidato = passo.candidatos.filter((item) => {
-        if(item.numero === digito) {
+        if(item.numero === numero) {
             return true;
         }else{
             return false;
         }
     });
-    console.log(passo)
-    console.log(digito)
     seuVoto.style.display = 'block';
     
     if(candidato.length > 0){
         candidato = candidato[0];
-        descricao.innerHTML = `<h1>Nome: ${candidato.nome} <br>Partido: ${candidato.partido}<br></h1>`;
+        descricao.innerHTML = `Nome: ${candidato.nome} <br>Partido: ${candidato.partido}`;
         if(candidato.vice !== undefined){
             descricao.innerHTML += `Vice: ${candidato.vice}`;    
         }
-        let fotosHtml = '';
+        
+        let fotos = '';
         for (const i in candidato.fotos) {
-                        fotosHtml += `<div class="candidato"> 
-                             <img src="img/${candidato.fotos[i].url}" alt=""><p>
-                             ${candidato.fotos[i].legenda}</p></div>`;    
+            if(candidato.fotos[i].small){
+                fotos += `<div class="descricao__img">
+                         <img src="./img/${candidato.fotos[i].url}" alt="">
+                         ${candidato.fotos[i].legenda}</div>`;    
+            } else{
+                fotos += `<div class="descricao__img">
+                             <img src="./img/${candidato.fotos[i].url}" alt="">
+                             ${candidato.fotos[i].legenda}</div>`;    
+            }
         }
-        descricao.innerHTML += fotosHtml;
+        descricao.innerHTML += fotos
     }else{
-        descricao.innerHTML = '<div class="piscando"><p><br>Voto Nulo</p></div>';
-    }
-    telaCargo.style.marginTop = 0;
-}
-
-function branco(){
-    if(digito === ''){
-        votoBranco = true;
-        seuVoto.style.display = 'block';
-        digito.innerHTML = '';
-        descricao.innerHTML = '<div class="pisca">VOTO EM BRANCO</div>';            
-    } else{
-        alert('Para votar em BRANCO \no campo de voto deve estar vazio.\n'+ 
-            'Aperte CORRIGE para apagar o campo de voto.');
+        descricao.innerHTML = '<div>VOTO NULO</div>';
     }
 }
-
 
 function clicou(n){
     let numeroP = document.querySelector('.tela__digito.piscando');
     if(numeroP !== null) {
         numeroP.innerHTML = n;
+        numero += n;
 
         numeroP.classList.remove('piscando');
         if(numeroP.nextElementSibling !== null){
@@ -82,6 +80,42 @@ function clicou(n){
     }    
 }
 
+function branco(){
+    if(numero === ''){
+        votoBranco = true;
+        seuVoto.style.display = 'block';
+        digitos.innerHTML = '';
+        descricao.innerHTML = '<div class="piscando">Voto em branco</div>';            
+    } else{
+        alert('O campo precisa estar sem nenhum digito para poder votar branco');
+    }
+}
 
-comecar()
+function corrige(){
+    if(corrigir == true){
+        comecar();
+    }
+}
 
+function confirma(){
+    let passo = passos[passoAtual];
+    let votoConfirmado = false;
+    
+    if(votoBranco == true){
+        votoConfirmado = true;
+    } else if(numero.length === passo.digitos){
+        votoConfirmado = true;  
+    }
+    
+    if(votoConfirmado == true){
+        passoAtual++;
+        if(passos[passoAtual] !== undefined){
+            comecar();
+        } else{
+            corrigir = false;
+            document.querySelector('.urna__tela').innerHTML = '<div class="fim"><h1>FIM</h1></div>';   
+        }
+    }
+}
+
+comecar();

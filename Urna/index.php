@@ -44,13 +44,13 @@
                 </div>
                 <div class="urna__teclas">
                     <div class="tecla--branco" onclick=branco()>Branco</div>
-                    <div class="tecla--vermelho">Corrige</div>
-                    <div class="tecla--verde">Confirma</div>
+                    <div class="tecla--vermelho" onclick=corrige()>Corrige</div>
+                    <div class="tecla--verde" onclick=confirma()>Confirma</div>
                 </div>
             </aside>
         </div>
     </main>
-    <script src="js/passos.js"></script>
+    <script src="js/etapas.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
